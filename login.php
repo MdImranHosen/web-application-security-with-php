@@ -198,7 +198,7 @@ if (isset($_POST['submit'])) {
                  	 	   	  	 <td>1</td>
                  	 	   	  	 <td align="center"><input type="checkbox" <?php if (!empty($stripcslashes)) { ?> checked <?php } ?> class="form-check-input" id="stripcslashes" name="stripcslashes"></td>
                  	 	   	  	 <td>stripcslashes</td>
-                 	 	   	  	 <td><small class="text-danger">Remove the backslash in front of "World!"</small></td>
+                 	 	   	  	 <td><small class="text-danger">Remove the backslash in front of "Word!"</small></td>
                  	 	   	  </tr>
                  	 	   	   <tr>
                  	 	   	  	 <td>2</td>
