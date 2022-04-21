@@ -115,8 +115,8 @@ $validcheck = '';
          		$post_id = validInt($post_id);
          		$post_id = mysqli_real_escape_string($mysqli, $post_id);
          	}
-
-         	#SELECT * FROM posts WHERE id = '10' UNION SELECT * FROM posts WHERE id = '4'
+         	
+         	#SELECT * FROM posts WHERE id = '6' UNION SELECT * FROM posts WHERE id = '4'
            
 				 $sqld = "SELECT * FROM posts WHERE id = '$post_id'";
 			    $resd = mysqli_query($mysqli, $sqld);
