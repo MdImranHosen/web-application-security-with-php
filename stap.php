@@ -1,5 +1,25 @@
 <?php
 $db_connect;
+// Stripcslashes - Remove the backslash in front of "word"
+
+#example 1: 
+
+$key1 = "  \ Test keyword Stripcslashes ";
+$output1 = stripcslashes($key1); //Remove the backslas
+#output: Test keyword Stripcslashes
+//------------------- 
+
+// mysqli_real_escape_string - function is used to escape characters in a string, making it legal to use in an SQL statement.
+
+$my_escape_string = ' Test Keyword <script>alert("hack");</script> ';
+
+// SQL query for login 1' OR '1 = 1
+
+$my_escape_string = mysqli_real_escape_string($db_connect, $my_escape_string);
+// $db_connect  - Database connection
+echo $my_escape_string;
+#--------------------------
+
 // Trim in php
 
 $ver_trim = "  Test Keyword    ";
@@ -8,16 +28,8 @@ $ver_trim = trim($ver_trim);
 echo $ver_trim;
 
 #Output is: Test Keyword // without whitespace    
+#---------------------------
 
-// mysqli_real_escape_string 
-
-$my_escape_string = ' Test Keyword <script>alert("hack");</script> ';
-$my_escape_string = mysqli_real_escape_string($db_connect, $my_escape_string);
-// $db_connect  - Database connection
-echo $my_escape_string;
-
-
- // SQL query for login 1' OR '1 = 1
 
 // htmlentities() and htmlspecialchars()
 
@@ -44,7 +56,6 @@ if (!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $var_preg_m
 echo $output;
 
 #Output: imran@gmail.com Valid email format
-
 
 
 # after login 
